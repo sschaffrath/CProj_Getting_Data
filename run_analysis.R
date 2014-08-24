@@ -63,9 +63,10 @@ for (i in 1:length(files)){
 }
 
 X_data<-cbind(subject_data,X_data)
+colnames(X_data)[1]<-"Subject"
 X_data$Subject<-as.factor(X_data$Subject)
 rm(subject_data)
-colnames(X_data)[1]<-"Subject"
+
 
 ##Drops all non Mean / SD variables and creates the Definitive Clean Data Set
 
